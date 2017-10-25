@@ -1,2 +1,2 @@
-# StubhubR
-R package to extract Stubhub data through API
+# SeatGeekR
+R package to extract SeatGeek data through API
