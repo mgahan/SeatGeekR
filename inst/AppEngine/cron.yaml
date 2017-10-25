@@ -1,0 +1,12 @@
+cron:
+- description: "Seatgeek Scrape"
+  url: /seatgeek
+  target: seatgeek
+  schedule: every day 13:00
+  timezone: America/Los_Angeles
+#- description: "Test Normal Sample"
+#  url: /mean?samples=10000
+#  target: simple-app
+#  schedule: every day 14:00
+#  timezone: America/Los_Angeles
+#gcloud app deploy cron.yaml

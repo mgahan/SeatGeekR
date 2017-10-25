@@ -1,0 +1,25 @@
+runtime: custom
+env: flex
+service: seatgeek
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 1
+
+resources:
+  cpu: 1
+  memory_gb: 2
+  disk_size_gb: 10
+  volumes:
+  - name: ramdisk1
+    volume_type: tmpfs
+    size_gb: 1.5
+
+env_variables:
+  GCS_AUTH_FILE: mgahan-metabiota-modeling.json
+  TWITTER_PAT: twitter_token.rds
+  
+handlers:
+- url: /
+  static_files: www/index.html
+  upload: www/index.html
+  

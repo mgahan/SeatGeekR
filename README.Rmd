@@ -1,0 +1,43 @@
+---
+title: "SeatGeekR"
+author: "Mike Gahan"
+date: "10/25/2017"
+output: md_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(data.table)
+library(knitr)
+library(SeatGeekR)
+```
+
+## SeatgeekR
+
+### Example
+
+A *R* package that allows the user to scrape ticket information from the Seatgeek API
+
+```{r}
+exampleOutput <- seatgeek_extract_slug(TEAM_NAME="nebraska-cornhuskers-football")
+kable(exampleOutput[, .(title, stats.average_price, stats.highest_price, stats.listing_count, stats.lowest_price)])
+```
+
+### API Keys
+
+Before accessing the API, you must visit the SeatGeek API and create your credentials here;
+
+https://seatgeek.com/account/develop
+
+Seatgeek makes it pretty easy to get your credentials. Also, as of this time, Seatgeek does not really seem to have limits on their API.
+
+### Team Names
+
+Right now, this package has the main functionality of being able to search by team name. In the future, I hope to allow the app to search
+by more. I do have a list of teamnames available for those interested.
+
+```{r}
+fpath <- system.file("Teams", "Team_Slug_Names.csv", package="SeatGeekR")
+TeamNames <- fread(fpath)
+kable(tail(TeamNames))
+```
