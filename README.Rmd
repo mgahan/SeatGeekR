@@ -16,7 +16,7 @@ library(SeatGeekR)
 
 ### Example
 
-A *R* package that allows the user to scrape ticket information from the Seatgeek API
+A **R** package that allows the user to scrape ticket information from the Seatgeek API
 
 ```{r}
 exampleOutput <- seatgeek_extract_slug(TEAM_NAME="nebraska-cornhuskers-football")
