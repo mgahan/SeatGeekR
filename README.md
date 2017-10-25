@@ -3,8 +3,8 @@ SeatgeekR
 
 ### Example
 
-A *R* package that allows the user to scrape ticket information from the
-Seatgeek API
+A **R** package that allows the user to scrape ticket information from
+the Seatgeek API
 
     exampleOutput <- seatgeek_extract_slug(TEAM_NAME="nebraska-cornhuskers-football")
     kable(exampleOutput[, .(title, stats.average_price, stats.highest_price, stats.listing_count, stats.lowest_price)])
@@ -24,14 +24,14 @@ Seatgeek API
 <td align="left">Nebraska Cornhuskers at Purdue Boilermakers Football</td>
 <td align="left">38</td>
 <td align="left">181</td>
-<td align="left">328</td>
-<td align="left">24</td>
+<td align="left">327</td>
+<td align="left">23</td>
 </tr>
 <tr class="even">
 <td align="left">Northwestern Wildcats at Nebraska Cornhuskers Football</td>
 <td align="left">89</td>
 <td align="left">601</td>
-<td align="left">1185</td>
+<td align="left">1181</td>
 <td align="left">27</td>
 </tr>
 <tr class="odd">
