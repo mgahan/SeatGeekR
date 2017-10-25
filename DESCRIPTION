@@ -1,11 +1,15 @@
-Package: StubhubR
+Package: SeatGeekR
 Type: Package
-Title: What the Package Does (Title Case)
+Title: R Package to call Stubhub API
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Mike Gahan
+Maintainer: Mike Gahan <michael.gahan@gmail.com>
+Depends:
+    R (>= 3.3.1),
+    data.table (>= 1.10.4),
+    httr,
+    jsonlite
+Description: Call SeatGeekR API using R
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
