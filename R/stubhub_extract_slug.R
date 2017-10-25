@@ -1,20 +1,21 @@
-#' Extract data from StubhubAPI
+#' Extract data from SeatGeek API
 #'
 #' Extract ticket prices, ticket counts
 #' @keywords stubhub
 #' @param TEAM_NAME teamname "nebraska-cornhuskers-football"
-#' @param STUBHUB_CLIENT_ID Defaults to Sys.getenv("STUBHUB_CLIENT_ID")
-#' @param STUBHUB_CLIENT_SECRET VDefaults to Sys.getenv("STUBHUB_CLIENT_SECRET")
+#' @param SEEKGEEK_CLIENT_ID Defaults to Sys.getenv("SEATGEEK_CLIENT_ID")
+#' @param SEEKGEEK_CLIENT_SECRET VDefaults to Sys.getenv("SEEKGEEK_CLIENT_SECRET")
 #' @export
 #' @examples
-#' stubhub_extract_slug(TEAM_NAME="nebraska-cornhuskers-football")
+#' fpath <- system.file("Teams", "Team_Slug_Names.csv", package="SeatGeekR")
+#' seatgeek_extract_slug(TEAM_NAME="nebraska-cornhuskers-football")
 
-stubhub_extract_slug <- function(TEAM_NAME, STUBHUB_CLIENT_ID=Sys.getenv("STUBHUB_CLIENT_ID"),
-                                 STUBHUB_CLIENT_SECRET=Sys.getenv("STUBHUB_CLIENT_SECRET")) {
+seatgeek_extract_slug <- function(TEAM_NAME, SEEKGEEK_CLIENT_ID=Sys.getenv("SEATGEEK_CLIENT_ID"),
+                                 SEEKGEEK_CLIENT_SECRET=Sys.getenv("SEEKGEEK_CLIENT_SECRET")) {
 
-  # Extract Data from Stubhub API
+  # Extract Data from Seatgeek API
   url <- paste0("https://api.seatgeek.com/2/events?performers.slug=",TEAM_NAME,"&client_id=",
-               STUBHUB_CLIENT_ID,"&client_secret=",STUBHUB_CLIENT_SECRET)
+               SEEKGEEK_CLIENT_ID,"&client_secret=",SEEKGEEK_CLIENT_SECRET)
   output <- GET(url=url)
 
   # Search if output returned an error or not
