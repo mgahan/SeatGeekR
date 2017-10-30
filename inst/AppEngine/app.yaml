@@ -15,8 +15,9 @@ resources:
     size_gb: 1.5
 
 env_variables:
-  GCS_AUTH_FILE: mgahan-metabiota-modeling.json
-  TWITTER_PAT: twitter_token.rds
+  GCS_AUTH_FILE: <%= ENV["GCS_AUTH_FILE"] %>
+  SEATGEEK_CLIENT_ID: <%= ENV["SEATGEEK_CLIENT_ID"] %>
+  SEATGEEK_CLIENT_SECRET: <%= ENV["SEATGEEK_CLIENT_SECRET"] %>
   
 handlers:
 - url: /

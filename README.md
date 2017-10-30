@@ -1,6 +1,11 @@
 SeatgeekR
 ---------
 
+### Install package
+
+    devtools::install_github("mgahan/SeatGeekR")
+    library(SeatGeekR)
+
 ### Example
 
 A **R** package that allows the user to scrape ticket information from
@@ -21,39 +26,46 @@ the Seatgeek API
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Nebraska Cornhuskers at Purdue Boilermakers Football</td>
-<td align="left">38</td>
-<td align="left">181</td>
-<td align="left">327</td>
-<td align="left">23</td>
-</tr>
-<tr class="even">
 <td align="left">Northwestern Wildcats at Nebraska Cornhuskers Football</td>
-<td align="left">89</td>
+<td align="left">100</td>
 <td align="left">601</td>
-<td align="left">1181</td>
-<td align="left">27</td>
-</tr>
-<tr class="odd">
-<td align="left">Nebraska Cornhuskers at Minnesota Golden Gophers Football</td>
-<td align="left">165</td>
-<td align="left">347</td>
-<td align="left">825</td>
-<td align="left">104</td>
+<td align="left">1127</td>
+<td align="left">32</td>
 </tr>
 <tr class="even">
-<td align="left">Nebraska Cornhuskers at Penn State Nittany Lions Football</td>
-<td align="left">211</td>
-<td align="left">1221</td>
-<td align="left">1516</td>
-<td align="left">99</td>
+<td align="left">Nebraska Cornhuskers at Minnesota Golden Gophers Football</td>
+<td align="left">161</td>
+<td align="left">347</td>
+<td align="left">803</td>
+<td align="left">90</td>
 </tr>
 <tr class="odd">
+<td align="left">Nebraska Cornhuskers at Penn State Nittany Lions Football</td>
+<td align="left">208</td>
+<td align="left">1473</td>
+<td align="left">1376</td>
+<td align="left">98</td>
+</tr>
+<tr class="even">
 <td align="left">Iowa Hawkeyes at Nebraska Cornhuskers Football</td>
-<td align="left">187</td>
-<td align="left">746</td>
-<td align="left">1562</td>
-<td align="left">73</td>
+<td align="left">173</td>
+<td align="left">711</td>
+<td align="left">1560</td>
+<td align="left">65</td>
+</tr>
+<tr class="odd">
+<td align="left">Purdue Boilermakers at Nebraska Cornhuskers Football</td>
+<td align="left">209</td>
+<td align="left">216</td>
+<td align="left">3</td>
+<td align="left">204</td>
+</tr>
+<tr class="even">
+<td align="left">Illinois Fighting Illini at Nebraska Cornhuskers Football</td>
+<td align="left">209</td>
+<td align="left">216</td>
+<td align="left">3</td>
+<td align="left">204</td>
 </tr>
 </tbody>
 </table>

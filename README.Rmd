@@ -1,7 +1,7 @@
 ---
 title: "SeatGeekR"
 author: "Mike Gahan"
-date: "10/25/2017"
+date: "10/29/2017"
 output: md_document
 ---
 
@@ -13,6 +13,13 @@ library(SeatGeekR)
 ```
 
 ## SeatgeekR
+
+### Install package
+
+```{r, eval=FALSE}
+devtools::install_github("mgahan/SeatGeekR")
+library(SeatGeekR)
+```
 
 ### Example
 
