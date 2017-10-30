@@ -1,5 +1,6 @@
 FROM mgahan/plumberbase
 LABEL maintainer="mgahan"
+RUN ["install2.r", "-r 'https://cloud.r-project.org'", "knitr"]
 RUN ["installGithub.r", "mgahan/SeatGeekR"]
 WORKDIR /payload/
 COPY [".", "./"]

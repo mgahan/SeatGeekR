@@ -5,6 +5,7 @@
 library(SeatGeekR)
 library(googleAuthR)         
 library(googleCloudStorageR) 
+library(knitr)
 
 #* @get /seatgeek
 scheduleSeatGeek <- function() {
@@ -48,4 +49,4 @@ scheduleSeatGeek <- function() {
 
 #gcloud app deploy
 #gcloud app deploy cron.yaml
-# curl "https://seatgeek-dot-metabiota-modeling.appspot.com/seatgeek"
+# curl "https://mike-personal.appspot.com/seatgeek"
