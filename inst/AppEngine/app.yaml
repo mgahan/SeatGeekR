@@ -1,6 +1,6 @@
 runtime: custom
 env: flex
-service: seatgeek
+service: default
 automatic_scaling:
   min_num_instances: 1
   max_num_instances: 1
@@ -15,9 +15,9 @@ resources:
     size_gb: 1.5
 
 env_variables:
-  GCS_AUTH_FILE: <%= ENV["GCS_AUTH_FILE"] %>
-  SEATGEEK_CLIENT_ID: <%= ENV["SEATGEEK_CLIENT_ID"] %>
-  SEATGEEK_CLIENT_SECRET: <%= ENV["SEATGEEK_CLIENT_SECRET"] %>
+  GCS_AUTH_FILE: ${google_auth_file}
+  SEATGEEK_CLIENT_ID: ${SEATGEEK_CLIENT_ID}
+  SEATGEEK_CLIENT_SECRET: ${SEATGEEK_CLIENT_SECRET}
   
 handlers:
 - url: /
