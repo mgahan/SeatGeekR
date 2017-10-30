@@ -39,8 +39,8 @@ scheduleSeatGeek <- function() {
   
   # Return sample
   sampDat <- dat[TEAM_NAME=="nebraska-cornhuskers-football"]
-  sampDat <- jsonlite::toJSON(sampDat)
-  outList <- list("SampleData"=sampDat)
+  sampJSON <- jsonlite::toJSON(sampDat)
+  outList <- list(SampleData=sampJSON)
   
   return(outList[])
 }

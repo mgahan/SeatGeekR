@@ -13,6 +13,11 @@ cron:
   url: /seatgeek
   target: default
   schedule: every saturday 07:00
+  timezone: America/Los_Angeles 
+- description: "Seatgeek Scrape Saturday 8am"
+  url: /seatgeek
+  target: default
+  schedule: every saturday 08:00
   timezone: America/Los_Angeles  
 #- description: "Test Normal Sample"
 #  url: /mean?samples=10000
