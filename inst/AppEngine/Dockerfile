@@ -10,7 +10,7 @@ ENTRYPOINT ["R", "-e", "pr <- plumber::plumb('schedule.R'); pr$run(host='0.0.0.0
 CMD ["schedule.R"]
 
 # docker build -t mgahan/seatgeek .
-#docker run -p 8081:8080 -d \
+#docker run -p 8081:8080 -d --restart always \
 #-e GCE_SERVICE_ACCOUNT="mike-personal-account@mike-personal.iam.gserviceaccount.com" \
 #-e GCE_AUTH_FILE="mike-personal-3567894f5d77.json" \
 #-e SEATGEEK_CLIENT_ID="blah" \
