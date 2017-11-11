@@ -36,9 +36,9 @@ scheduleSeatGeek <- function() {
   ZipSys <- system(ZipTxt, intern=TRUE)
   
   # Upload file
-  MoveTxt <- paste0("gsutil -q -m mv ",FileName,".gz gs://metabiota-tweets/Historical/",FileName,".gz")
+  MoveTxt <- paste0("gsutil -q -m mv ",FileName,".gz gs://seatgeek-scrape/",FileName,".gz")
   MoveSys <- system(MoveTxt, intern=TRUE)
-  #system(paste0("gsutil -q -m mv ",FileName,".gz gs://metabiota-tweets/Historical/",FileName,".gz"))
+  #system(paste0("gsutil -q -m mv ",FileName,".gz gs://seatgeek-scrape/",FileName,".gz"))
   # gcs_upload(paste0(FileName,".gz"), 
   #            bucket = "seatgeek-scrape", 
   #            name = paste0("",FileName,".gz"))
