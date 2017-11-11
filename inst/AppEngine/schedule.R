@@ -3,8 +3,8 @@
 
 # Bring in library
 library(SeatGeekR)
-library(googleAuthR)         
-library(googleCloudStorageR) 
+# library(googleAuthR)         
+# library(googleCloudStorageR) 
 library(knitr)
 
 #* @get /seatgeek
@@ -29,11 +29,13 @@ scheduleSeatGeek <- function() {
   ZipSys <- system(ZipTxt, intern=TRUE)
   
   # Upload file
+  MoveTxt <- paste0("gsutil -q -m mv ",FileName,".gz gs://metabiota-tweets/Historical/",FileName,".gz")
+  MoveSys <- system(MoveTxt, intern=TRUE)
   #system(paste0("gsutil -q -m mv ",FileName,".gz gs://metabiota-tweets/Historical/",FileName,".gz"))
-  gcs_upload(paste0(FileName,".gz"), 
-             bucket = "seatgeek-scrape", 
-             name = paste0("",FileName,".gz"))
-  RmvFile <- file.remove(paste0(FileName,".gz"))
+  # gcs_upload(paste0(FileName,".gz"), 
+  #            bucket = "seatgeek-scrape", 
+  #            name = paste0("",FileName,".gz"))
+  # RmvFile <- file.remove(paste0(FileName,".gz"))
   
   #seatgeek_extract_slug(TEAM_NAME="nebraska-cornhuskers-football")
   #seatgeek_extract_slug(TEAM_NAME="army-west-point-black-knights-football")
