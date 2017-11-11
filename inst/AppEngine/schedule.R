@@ -14,6 +14,13 @@ scheduleSeatGeek <- function() {
   fpath <- system.file("Teams", "Team_Slug_Names.csv", package="SeatGeekR")
   TeamNames <- fread(fpath)
   
+  # Authenicate
+  AuthTxt <- paste0("gcloud auth activate-service-account ",
+                    Sys.getenv("GCE_SERVICE_ACCOUNT"),
+                    " --key-file ",
+                    Sys.getenv("GCE_AUTH_FILE"))
+  AuthSys <- system(AuthTxt, intern=TRUE)
+  
   # Loop over teamnames
   StartTime <- Sys.time()
   datList <- lapply(TeamNames$Team, function(x) {print(x);seatgeek_extract_slug(TEAM_NAME=x)})
